@@ -1,0 +1,1 @@
+Input & Output: Standard streams handle data flow in C++. Use std::cin with the extraction operator (>>) to read user input from standard input, and std::cout with the insertion operator (<<) to send output to the console.

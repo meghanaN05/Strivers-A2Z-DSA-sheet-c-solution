@@ -1,0 +1,17 @@
+If / Else If / Else: Evaluates boolean expressions sequentially to execute specific blocks of code based on conditions.
+//example
+#include <iostream>
+using namespace std;
+
+int main() {
+    int age;
+    cin >> age;
+
+    if (age >= 18) {
+        cout << "You are eligible to vote";
+    } else {
+        cout << "You are not eligible to vote";
+    }
+
+    return 0;
+}

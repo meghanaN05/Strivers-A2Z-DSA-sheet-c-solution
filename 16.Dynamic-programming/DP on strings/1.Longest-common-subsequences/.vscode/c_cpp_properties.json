@@ -1,0 +1,13 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Users/megha/qnx800/target/qnx/usr/include/c++/12.2.0/aarch64-unknown-nto-qnx8.0.0"
+            ],
+            "windowsSdkVersion": "10.0.26100.0"
+        }
+    ],
+    "version": 4
+}

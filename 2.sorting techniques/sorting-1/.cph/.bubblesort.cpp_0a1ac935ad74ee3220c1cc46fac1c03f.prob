@@ -1,0 +1,1 @@
+{"name":"Local: bubblesort","url":"c:\\A-Z striver sheet\\sorting techniques\\sorting-1\\bubblesort.cpp","tests":[{"id":1788718912439,"input":"5\n3 4 2 5 1","output":"1 2 3 4 5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\A-Z striver sheet\\sorting techniques\\sorting-1\\bubblesort.cpp","group":"local","local":true}

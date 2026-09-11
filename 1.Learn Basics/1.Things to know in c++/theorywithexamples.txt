@@ -1,0 +1,28 @@
+//pass by value
+#include <iostream>
+
+void incrementByValue(int num) {
+    num = num + 10; // Only modifies the local copy
+    std::cout << "Inside function: " << num << std::endl;
+}
+
+int main() {
+    int x = 5;
+    incrementByValue(x);
+    std::cout << "In main after function call: " << x << std::endl; // x remains 5
+    return 0;
+}
+ //pass by reference 
+ #include <iostream>
+
+void incrementByReference(int &num) {
+    num = num + 10; // Modifies the original variable directly
+    std::cout << "Inside function: " << num << std::endl;
+}
+
+int main() {
+    int x = 5;
+    incrementByReference(x);
+    std::cout << "In main after function call: " << x << std::endl; // x is now 15
+    return 0;
+}

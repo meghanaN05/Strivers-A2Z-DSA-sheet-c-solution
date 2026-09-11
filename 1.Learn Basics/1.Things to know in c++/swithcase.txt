@@ -1,0 +1,28 @@
+Switch Case: Evaluates an integer or character expression against multiple case labels. Each case requires a break statement to prevent fall-through execution to subsequent cases
+//example
+#include <iostream>
+using namespace std;
+
+int main() {
+    int day;
+    cin >> day;
+
+    switch (day) {
+        case 1:
+            cout << "Monday";
+            break;
+
+        case 2:
+            cout << "Tuesday";
+            break;
+
+        case 3:
+            cout << "Wednesday";
+            break;
+
+        default:
+            cout << "Invalid day";
+    }
+
+    return 0;
+}

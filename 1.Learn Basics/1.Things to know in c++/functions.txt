@@ -1,0 +1,17 @@
+Functions & Parameter Passing:
+
+Pass by Value: A copy of the actual argument is passed to the function parameters. Changes made inside the function do not affect the original variable.
+
+Pass by Reference: Uses the reference operator (&). The function receives direct access to the memory address of the caller's variable, so changes inside the function mutate the original argument directly.
+#include <iostream>
+using namespace std;
+
+void greet() {
+    cout << "Hello, welcome to C++!";
+}
+
+int main() {
+    greet();  // Calling the function
+
+    return 0;
+}

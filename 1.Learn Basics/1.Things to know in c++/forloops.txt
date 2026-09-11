@@ -1,0 +1,11 @@
+For Loop: Best used when the number of iterations is known beforehand. Consists of initialization, condition checking, and update (e.g., for(int i = 0; i < n; i++)).
+#include <iostream>
+using namespace std;
+
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        cout << i << endl;
+    }
+
+    return 0;
+}

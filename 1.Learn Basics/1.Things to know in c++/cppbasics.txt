@@ -1,0 +1,9 @@
+Data Types & Variables:
+
+Primitive Types: int (integers, typically 4 bytes), float / double (floating-point numbers), char (single characters in single quotes 'a'), bool (true or false).
+
+Composite/Derived Types:
+
+Arrays: Contiguous memory locations storing multiple elements of the same type (e.g., int arr[5]). Arrays are zero-indexed, meaning the first element is accessed at index 0.
+
+Strings: Sequential collections of characters (e.g., std::string str = "hello"). Managed via the <string> header.
