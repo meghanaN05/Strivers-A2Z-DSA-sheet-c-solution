@@ -1,0 +1,25 @@
+Preorder  = Root → Left → Right
+Inorder   = Left → Root → Right
+Postorder = Left → Right → Root
+Given	Can find:
+Preorder + Inorder	 Postorder
+Postorder + Inorder	 Preorder
+Preorder + Postorder Not always uniquely possible
+* Inorder must usually be present to uniquely construct a binary tree.
+1.Preorder =  1 2 4 5 3
+  Inorder  =  4 2 5 1 3
+    1
+  2    3
+4   5
+posorder =  4 5 2 3 1
+2.Postorder = 4 5 2 3 1
+  Inorder   = 4 2 5 1 3
+     1
+   2   3
+ 4   5
+ preorder= 1 2 4 5 3
+
+PREORDER  → First element = ROOT
+INORDER   → Elements before root = LEFT
+             Elements after root  = RIGHT
+POSTORDER → Last element = ROOT      
