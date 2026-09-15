@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+vector<int> ans;
+void solve(TreeNode *root, int level)
+{
+  if (root = NULL)
+    return;
+  if (level == ans.size())
+    ans.push_back(root->val);
+  solve(root->left, level + 1);
+  solve(root->right, level + 1);
+}
+vector<int> rightSideview(TreeNode *root)
+{
+  solve(root, 0);
+  return ans;
+}
+/*time complexity:O(n) && space complexity:O(n)*/
