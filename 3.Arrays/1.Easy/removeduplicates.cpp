@@ -17,3 +17,4 @@ public:
     return cnt;
   }
 };
+/*tc:0(n) sc:O(1)*/

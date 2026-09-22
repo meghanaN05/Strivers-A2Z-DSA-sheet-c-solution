@@ -12,3 +12,21 @@ public:
     return true;
   }
 };
+// another approach
+class Solution
+{
+public:
+  bool check(vector<int> &nums)
+  {
+    int cnt = 0;
+    int n = nums.size();
+    if (nums[n - 1] > nums[0])
+      cnt++;
+    for (int i = 0; i < n - 1; i++)
+    {
+      if (nums[i] > nums[i + 1])
+        cnt++;
+    }
+    return cnt <= 1;
+  }
+};

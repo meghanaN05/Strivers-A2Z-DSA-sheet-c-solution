@@ -25,3 +25,4 @@ public:
     return second;
   }
 };
+/*tc:0(n) sc:O(1)*/

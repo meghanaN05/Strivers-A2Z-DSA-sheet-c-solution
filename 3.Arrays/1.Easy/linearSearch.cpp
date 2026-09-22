@@ -3,17 +3,14 @@ using namespace std;
 class Solution
 {
 public:
-  int largest(vector<int> &arr)
+  int search(vector<int> &arr, int x)
   {
     // code here
-    int maxi = arr[0];
     for (int i = 0; i < arr.size(); i++)
     {
-      if (arr[i] > maxi)
-      {
-        maxi = arr[i];
-      }
+      if (arr[i] == x)
+        return i;
     }
-    return maxi;
+    return -1;
   }
 };
