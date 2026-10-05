@@ -1,0 +1,13 @@
+A graph is a non - linear data structure made up of a set of vertices(nodes)
+connected by edges(links), used to model relationships like social networks or road maps.You can learn more about the formal definition and operations through the Introduction to Graph Data Structure on GeeksforGeeks.Main Types of Graphs Graphs are classified based on edge direction, weights, connectivity, and structure :
+• Directed Graph(Digraph) : Edges have a specific direction(arrows), meaning movement goes only one way(e.g., Twitter followers).
+• Undirected Graph : Edges have no direction, meaning connections work in both directions(e.g., Facebook friendships).
+• Weighted Graph : Every edge has a numerical value or cost attached, like distance or time(e.g., road maps with mileages).
+• Unweighted Graph : Edges have no values attached;
+all connections are treated equally.
+• Cyclic Graph : Contains at least one closed loop or cycle where a path leads back to the starting vertex.
+• Acyclic Graph : Contains no cycles or loops(e.g., a tree or family tree).
+• Connected Graph : There is a path available between every single pair of vertices.
+• Disconnected Graph : At least two vertices have no path connecting them.
+• Complete Graph : Every single vertex is directly connected to every other vertex.
+• Bipartite Graph : Vertices can be split into two separate sets where edges only connect nodes from different sets, not within the same set
