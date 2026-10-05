@@ -1,1 +1,64 @@
+//All the types of STL C++ functions:
+In the C++ Standard Template Library (STL), "functions" primarily fall into two categories: Algorithms (global standalone template functions that operate on data ranges) and Container Member Functions (built-in methods belonging to specific data structures). [1] 
+Here is the classification of all types of STL functions in C++.
+------------------------------
+## 1. STL Algorithm Functions (#include <algorithm> & <numeric>)
+These are generic functions that work via iterators rather than operating on the containers directly. They are broadly split into five types: [2] 
+## A. Non-Modifying Sequence Operations
+These functions look at elements in a range but do not change them:
+
+* std::find(): Searches for the first occurrence of a specific value. [1] 
+* std::count(): Counts the number of times a target value appears. [1] 
+* std::accumulate(): Computes the sum of a range of elements (found in <numeric>). [1] 
+* std::for_each(): Applies a specific function or operation to every single element in a range.
+
+## B. Modifying Sequence Operations
+These functions modify or alter the elements within a container:
+
+* std::copy(): Copies a range of elements to a new destination.
+* std::replace(): Substitutes all occurrences of an old value with a new value. [1] 
+* std::reverse(): Flips the order of elements within a range. [1] 
+* std::unique(): Removes consecutive duplicate elements from a range. [1] 
+
+## C. Sorting Operations
+Used to arrange elements efficiently:
+
+* std::sort(): Rearranges elements into ascending order by default ($O(N \log N)$ complexity).
+* std::stable_sort(): Sorts a range while preserving the relative order of identical elements.
+* std::partial_sort(): Sorts only the first N elements of a range. [1, 3] 
+
+## D. Binary Search Operations
+Optimized searching algorithms that require the range to be sorted first ($O(\log N)$ complexity): [1] 
+
+* std::binary_search(): Checks if a specific value exists in the range (returns a boolean).
+* std::lower_bound(): Returns an iterator to the first element ≥ the target value.
+* std::upper_bound(): Returns an iterator to the first element > the target value. [1] 
+
+## E. Min/Max Operations
+
+* std::min() / std::max(): Returns the smaller or larger of two values.
+* std::min_element() / std::max_element(): Finds the iterator pointing to the smallest or largest item in a range.
+
+------------------------------
+## 2. STL Container Member Functions
+Every container (like vector, list, or map) features its own set of built-in member functions to manipulate its state. These are classified by behavior: [1, 4] 
+
+| Function Type | Purpose | Common Examples |
+|---|---|---|
+| Iterators | Return pointers to navigate the container | begin(), end(), rbegin(), rend() |
+| Capacity | Inspect or alter memory allocation | size(), empty(), capacity(), resize() |
+| Element Access | Safely read or retrieve elements | front(), back(), at(), top() |
+| Modifiers | Add or delete entries | push_back(), pop_back(), insert(), erase(), clear() |
+| Lookup | Search container-specific structures | find(), count() (optimized specifically for map & set) |
+
+------------------------------
+## 3. Utility & Function Objects (Functors)
+
+* Functors (<functional>): Classes that overload the operator() to behave like regular functions. Examples include std::less<T> (used by default to sort sets/maps) and std::greater<T>.
+* Iterator Utilities (<iterator>): Functions that manage iterator positions, such as std::advance(), std::next(), std::prev(), and std::distance(). [2, 5, 6, 7, 8] 
+
+
+
+
+
 
