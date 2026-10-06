@@ -1,0 +1,86 @@
+//binary  search tree concept
+A Binary Search Tree (BST) is a node-based binary tree data structure that satisfies the BST property:
+
+The left subtree of a node contains only nodes with keys less than the node's key.
+The right subtree of a node contains only nodes with keys greater than the node's key.
+Both the left and right subtrees must also be binary search trees.
+
+Because of this property, an in-order traversal(Left, Root, Right) of a BST yields elements in sorted ascending order.
+
+
+### Time Complexity
+
+| Operation | Average Case | Worst Case (Skewed Tree) |
+| --- | --- | --- |
+| **Search** | $O(\log N)$ | $O(N)$ |
+| **Insertion** | $O(\log N)$ | $O(N)$ |
+| **Deletion** | $O(\log N)$ | $O(N)$ |
+
+---
+
+ C++ Representation
+
+Here is a simple C++ implementation of a BST Node structure along with basic insertion and in-order traversal:
+
+#include <iostream>
+
+// Definition of a BST Node
+struct Node {
+    int data;
+    Node* left;
+    Node* right;
+
+    // Constructor
+    Node(int val) {
+        data = val;
+        left = nullptr;
+        right = nullptr;
+    }
+};
+
+// Function to insert a value into the BST
+Node* insert(Node* root, int val) {
+    if (root == nullptr) {
+        return new Node(val);
+    }
+
+    if (val < root->data) {
+        root->left = insert(root->left, val);
+    } else if (val > root->data) {
+        root->right = insert(root->right, val);
+    }
+
+    return root;
+}
+
+// In-order traversal (prints elements in sorted order)
+void inorder(Node* root) {
+    if (root == nullptr) return;
+
+    inorder(root->left);
+    std::cout << root->data << " ";
+    inorder(root->right);
+}
+
+int main() {
+    Node* root = nullptr;
+
+    // Insert nodes into the BST
+    root = insert(root, 50);
+    insert(root, 30);
+    insert(root, 20);
+    insert(root, 40);
+    insert(root, 70);
+    insert(root, 60);
+    insert(root, 80);
+
+    // Print sorted elements
+    std::cout << "In-order Traversal: ";
+    inorder(root);
+    std::cout << std::endl;
+
+    return 0;
+}
+
+
+
