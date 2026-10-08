@@ -1,0 +1,66 @@
+//1)set ith bit
+//2)unset ith bit
+//3)check whether ith bit is set
+//4)get the ith bit
+//5)togle the ith bit
+//6)check if a number is a power of 2
+//7)total set bit(Brian Kernighan’s Algorithm)
+#include <iostream>
+
+class BitManipulation {
+public:
+    // 1) Set ith bit (forces the bit to 1)
+    static int setBit(int num, int i) {
+        return num | (1 << i);
+    }
+
+    // 2) Unset (Clear) ith bit (forces the bit to 0)
+    static int unsetBit(int num, int i) {
+        return num & ~(1 << i);
+    }
+
+    // 3) Check whether ith bit is set (returns true/false)
+    static bool isBitSet(int num, int i) {
+        return (num & (1 << i)) != 0;
+    }
+
+    // 4) Get the ith bit (returns the actual value: 0 or 1)
+    static int getBit(int num, int i) {
+        return (num >> i) & 1;
+    }
+
+    // 5) Toggle the ith bit (flips 0 to 1, or 1 to 0)
+    static int toggleBit(int num, int i) {
+        return num ^ (1 << i);
+    }
+
+    // 6) Check if a number is a power of 2
+    static bool isPowerOfTwo(int num) {
+        return num > 0 && (num & (num - 1)) == 0;
+        
+    }
+
+    // 7) Total set bits using Brian Kernighan’s Algorithm
+    static int countSetBits(int num) {
+        int count = 0;
+        while (num > 0) {
+            num = num & (num - 1); // Clears the rightmost set bit
+            count++;
+        }
+        return count;
+    }
+};
+
+int main() {
+    int n = 12; // Binary: 1100
+    std::cout << "Original: " << n << "\n";
+    std::cout << "1) Set 1st bit: " << BitManipulation::setBit(n, 1) << "\n";      // 1110 -> 14
+    std::cout << "2) Unset 3rd bit: " << BitManipulation::unsetBit(n, 3) << "\n";  // 0100 -> 4
+    std::cout << "3) Is 2nd bit set? " << std::boolalpha << BitManipulation::isBitSet(n, 2) << "\n"; // True
+    std::cout << "4) Get 3rd bit value: " << BitManipulation::getBit(n, 3) << "\n"; // 1
+    std::cout << "5) Toggle 2nd bit: " << BitManipulation::toggleBit(n, 2) << "\n"; // 1000 -> 8
+    std::cout << "6) Is 12 a power of 2? " << BitManipulation::isPowerOfTwo(n) << "\n"; // False
+    std::cout << "7) Total set bits in 12: " << BitManipulation::countSetBits(n) << "\n"; // 2
+    return 0;
+}
+
