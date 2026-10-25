@@ -32,6 +32,7 @@ public:
       dfs(root->right);
     }
     level.pop_back();
+    //leave to root path
   }
   vector<vector<int>> paths(Node *root)
   {
